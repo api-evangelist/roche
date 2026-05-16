@@ -8,11 +8,106 @@ tags:
   - Biotechnology
   - Healthcare
   - Diagnostics
-description: 'A Swiss multinational healthcare company and the world''s largest biotech company by revenue. A global leader in pharmaceuticals and diagnostics with pioneering treatments in oncology, immunology, and neuroscience.'
+description: >-
+  F. Hoffmann-La Roche is a Swiss multinational healthcare company with two
+  divisions: Roche Pharma and Roche Diagnostics. Roche does not publish a
+  general public developer API but exposes interoperability through the
+  navify diagnostics platform, the cobas infinity laboratory software, and
+  an open-source GitHub presence focused on data-science tooling such as
+  pyreadstat, foxops, and OligoGym.
 created: '2026-05-05'
-modified: '2026-05-05'
+modified: '2026-05-16'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: roche:pyreadstat
+    name: Roche pyreadstat
+    tags:
+      - Data Science
+      - Open Source
+      - Clinical Data
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://github.com/Roche/pyreadstat
+    properties:
+      - url: https://github.com/Roche/pyreadstat
+        type: SourceCode
+      - url: https://pypi.org/project/pyreadstat/
+        type: Package
+      - url: https://ofajardo.github.io/pyreadstat_documentation/
+        type: Documentation
+    description: >-
+      pyreadstat is Roche's Apache 2.0 Python package for reading and writing
+      SAS (sas7bdat), SPSS, and Stata files into pandas and polars data
+      frames. Widely used in clinical and life-sciences data pipelines.
+  - aid: roche:foxops
+    name: Roche foxops
+    tags:
+      - DevOps
+      - Open Source
+      - Templating
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://github.com/Roche/foxops
+    properties:
+      - url: https://github.com/Roche/foxops
+        type: SourceCode
+    description: >-
+      foxops is Roche's open-source templating system for Git repositories,
+      with a REST API service, Python client, and Terraform provider. Used
+      to keep repository scaffolding in sync across an organization.
+  - aid: roche:oligogym
+    name: Roche OligoGym
+    tags:
+      - Bioinformatics
+      - Machine Learning
+      - Open Source
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://github.com/Roche/OligoGym
+    properties:
+      - url: https://github.com/Roche/OligoGym
+        type: SourceCode
+    description: >-
+      OligoGym streamlines featurization, training, and evaluation of
+      predictive models for oligonucleotide properties. Apache 2.0.
 common:
   - type: Website
     url: https://www.roche.com/
+  - type: GitHubOrg
+    url: https://github.com/Roche
+  - type: DiagnosticsPortal
+    url: https://diagnostics.roche.com/
+  - type: NavifyPlatform
+    url: https://navify.roche.com/
+  - type: SuppliersPortal
+    url: https://suppliers.roche.com/
+  - type: NaftikoCapability
+    url: capabilities/roche-data-science.yaml
+  - type: Vocabulary
+    url: vocabulary/roche-vocabulary.yml
+  - type: Features
+    data:
+      - name: Clinical Data File Interop
+        description: pyreadstat reads/writes SAS, SPSS, and Stata files used in regulated clinical studies
+      - name: GitOps Templating
+        description: foxops keeps repo templates synchronized across an org with a REST service
+      - name: Oligonucleotide ML Toolkit
+        description: OligoGym provides featurization and modeling for nucleic-acid therapeutics
+      - name: Diagnostics Platform
+        description: navify provides Roche Diagnostics digital and algorithm services
+  - type: UseCases
+    data:
+      - name: Clinical Data Ingestion
+        description: Load SAS/SPSS/Stata files from clinical trials into modern Python pipelines
+      - name: Repository Standardization
+        description: Roll out consistent CI/CD and project scaffolds across many repos
+      - name: Therapeutic Discovery
+        description: Predict oligonucleotide properties to support drug discovery research
+  - type: Integrations
+    data:
+      - name: pandas and polars
+        description: pyreadstat integrates with both major Python dataframe libraries
+      - name: GitLab and Terraform
+        description: foxops integrates with GitLab and provides a Terraform provider
+      - name: HL7 / FHIR
+        description: Roche Diagnostics participates in healthcare interoperability standards
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

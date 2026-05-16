@@ -1,0 +1,18 @@
+vocabulary: roche
+description: Vocabulary for Roche's developer surface
+terms:
+  - term: pyreadstat
+    definition: Roche-maintained Python package for SAS/SPSS/Stata file I/O
+  - term: foxops
+    definition: Roche's templating service for synchronized Git repository scaffolds
+  - term: OligoGym
+    definition: Roche bioinformatics toolkit for oligonucleotide property prediction
+  - term: navify
+    definition: Roche Diagnostics digital platform for laboratory and decision algorithms
+  - term: cobas infinity
+    definition: Roche Diagnostics laboratory information solution
+dimensions:
+  - name: domain
+    values: [ClinicalDataScience, DevOps, Bioinformatics, Diagnostics]
+  - name: license
+    values: [Apache-2.0, Proprietary]

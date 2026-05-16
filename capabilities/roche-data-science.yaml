@@ -1,0 +1,41 @@
+apiVersion: naftiko.dev/v1
+kind: Capability
+metadata:
+  name: roche-data-science
+  provider: roche
+  description: >-
+    Capability composition rooted in Roche's open-source data-science tooling
+    for clinical pipelines and repository governance.
+spec:
+  workflows:
+    - name: clinical-file-ingest
+      description: Read SAS/SPSS/Stata clinical study files into pandas
+      steps:
+        - id: open-file
+          operation: pyreadstat.read_sas7bdat
+        - id: validate
+          operation: pyreadstat.metadata.check
+          dependsOn: open-file
+    - name: repo-scaffold-sync
+      description: Apply a templated scaffold to a Git repository
+      steps:
+        - id: apply-template
+          operation: foxops.apply
+        - id: verify
+          operation: foxops.diff
+          dependsOn: apply-template
+    - name: oligo-property-prediction
+      description: Train and evaluate an oligonucleotide property model
+      steps:
+        - id: featurize
+          operation: oligogym.featurize
+        - id: train
+          operation: oligogym.train
+          dependsOn: featurize
+        - id: evaluate
+          operation: oligogym.evaluate
+          dependsOn: train
+  licensing:
+    - pyreadstat: Apache-2.0
+    - foxops: Apache-2.0
+    - oligogym: Apache-2.0

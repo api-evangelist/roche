@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "https://github.com/Roche#",
+    "schema": "https://schema.org/",
+    "roche": "https://github.com/Roche#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "license": "schema:license",
+    "codeRepository": "schema:codeRepository",
+    "SoftwareLibrary": "schema:SoftwareSourceCode",
+    "ClinicalDataTool": "roche:ClinicalDataTool",
+    "BioinformaticsTool": "roche:BioinformaticsTool",
+    "DevOpsTool": "roche:DevOpsTool"
+  }
+}
