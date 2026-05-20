@@ -68,6 +68,8 @@ apis:
       OligoGym streamlines featurization, training, and evaluation of
       predictive models for oligonucleotide properties. Apache 2.0.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/roche
   - type: Website
     url: https://www.roche.com/
   - type: GitHubOrg
