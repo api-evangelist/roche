@@ -80,7 +80,7 @@ common:
     url: https://navify.roche.com/
   - type: SuppliersPortal
     url: https://suppliers.roche.com/
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/roche-data-science.yaml
   - type: Vocabulary
     url: vocabulary/roche-vocabulary.yml
