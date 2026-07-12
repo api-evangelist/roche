@@ -68,6 +68,10 @@ apis:
       OligoGym streamlines featurization, training, and evaluation of
       predictive models for oligonucleotide properties. Apache 2.0.
 common:
+  - type: VulnerabilityDisclosure
+    url: security/roche-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/roche-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/roche
   - type: Website
