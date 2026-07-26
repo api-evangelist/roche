@@ -2,7 +2,18 @@ aid: roche
 url: https://raw.githubusercontent.com/api-evangelist/roche/refs/heads/main/apis.yml
 name: Roche
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/roche.png
 tags:
   - Pharmaceutical
   - Biotechnology
@@ -16,57 +27,9 @@ description: >-
   an open-source GitHub presence focused on data-science tooling such as
   pyreadstat, foxops, and OligoGym.
 created: '2026-05-05'
-modified: '2026-05-16'
+modified: '2026-07-25'
 specificationVersion: '0.19'
-apis:
-  - aid: roche:pyreadstat
-    name: Roche pyreadstat
-    tags:
-      - Data Science
-      - Open Source
-      - Clinical Data
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://github.com/Roche/pyreadstat
-    properties:
-      - url: https://github.com/Roche/pyreadstat
-        type: SourceCode
-      - url: https://pypi.org/project/pyreadstat/
-        type: Package
-      - url: https://ofajardo.github.io/pyreadstat_documentation/
-        type: Documentation
-    description: >-
-      pyreadstat is Roche's Apache 2.0 Python package for reading and writing
-      SAS (sas7bdat), SPSS, and Stata files into pandas and polars data
-      frames. Widely used in clinical and life-sciences data pipelines.
-  - aid: roche:foxops
-    name: Roche foxops
-    tags:
-      - DevOps
-      - Open Source
-      - Templating
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://github.com/Roche/foxops
-    properties:
-      - url: https://github.com/Roche/foxops
-        type: SourceCode
-    description: >-
-      foxops is Roche's open-source templating system for Git repositories,
-      with a REST API service, Python client, and Terraform provider. Used
-      to keep repository scaffolding in sync across an organization.
-  - aid: roche:oligogym
-    name: Roche OligoGym
-    tags:
-      - Bioinformatics
-      - Machine Learning
-      - Open Source
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://github.com/Roche/OligoGym
-    properties:
-      - url: https://github.com/Roche/OligoGym
-        type: SourceCode
-    description: >-
-      OligoGym streamlines featurization, training, and evaluation of
-      predictive models for oligonucleotide properties. Apache 2.0.
+apis: []
 common:
   - type: VulnerabilityDisclosure
     url: security/roche-vulnerability-disclosure.yml
@@ -114,6 +77,12 @@ common:
         description: foxops integrates with GitLab and provides a Terraform provider
       - name: HL7 / FHIR
         description: Roche Diagnostics participates in healthcare interoperability standards
+  - type: ProductPage
+    url: https://github.com/Roche/pyreadstat
+  - type: ProductPage
+    url: https://github.com/Roche/foxops
+  - type: ProductPage
+    url: https://github.com/Roche/OligoGym
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
