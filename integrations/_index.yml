@@ -51,3 +51,32 @@
     detected: '2026-10-15'
   status: not-a-workflow
   arazzo: null
+- slug: roche-clinicaltrials-gov-cell-gene-therapy-trial-sponsors
+  label: ClinicalTrials.gov (cell / gene therapy trial sponsors)
+  partner_name: ClinicalTrials.gov (cell / gene therapy trial sponsors)
+  category: Interventional cell / gene therapy trial sponsor
+  type: register
+  channel: standard-directory
+  evidence: https://clinicaltrials.gov/study/NCT06826612
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: ClinicalTrials.gov API v2 (interventional, industry lead sponsor, cell/gene therapy interventions)
+    standard: null
+    spec_file: null
+    role: cgt-trial-lead-sponsor
+    registered_name: Hoffmann-La Roche
+    matched_domain: roche.com
+    matched_by: domain
+    active_trial: true
+    latest_start: '2025-02-21'
+    trials_sample:
+    - NCT06826612
+    signal_note: 'PARTICIPATION only (a trial is not an approval): active_trial and latest_start are per-edge signals;
+      the number of trials is never counted'
+    detected_by: sweep-cell-gene-therapy.py
+    detected: '2026-10-20'
+    identity: wikidata Q212646 'Hoffmann-La Roche' P856 https://www.roche.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
