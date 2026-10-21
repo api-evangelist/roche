@@ -73,6 +73,87 @@ edges:
     identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
   detected_by: sweep-cell-gene-therapy.py
   first_seen: '2026-10-20'
+- partner_name: EUDAMED (EU IVDR manufacturers)
+  partner: null
+  partner_match: register
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://ec.europa.eu/tools/eudamed/#/screen/search-eo/e5f2cd91-4baa-42dc-a85a-4c33b06ea9bf
+  category: EU IVDR-registered manufacturer
+  contract_reference:
+    register: EUDAMED public API (UDI-DI data, applicable legislation IVDR; actor public information)
+    standard: EU IVDR (Regulation (EU) 2017/746) manufacturer + UDI registration
+    spec_file: null
+    role: eudamed-ivdr-manufacturer
+    registered_name: Roche Diagnostics GmbH
+    matched_domain: roche.com
+    matched_by: domain
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    register_id: DE-MF-000006260
+    register_country: DE
+    actor_status: active
+    domain_from: registered e-mail domain
+    trade_names_sample:
+    - Elecsys EBV IgM
+    - cobas i601 Language Pack for SW 01-05_ES
+    - cobas i601 Language Pack for SW 01-05_IT
+    - cobas i601 Language Pack for SW 01-05_PT
+    - cobas pro Connection Kit (2 MS)
+    certified_products:
+    - product: EU IVDR device registration, class A
+      product_type: IVDR class A
+      lapsed: false
+      statuses:
+      - on-the-market
+    - product: EU IVDR device registration, class B
+      product_type: IVDR class B
+      lapsed: false
+      statuses:
+      - on-the-market
+    - product: EU IVDR device registration, class C
+      product_type: IVDR class C
+      lapsed: false
+      statuses:
+      - on-the-market
+    - product: EU IVDR device registration, class D
+      product_type: IVDR class D
+      lapsed: false
+      statuses:
+      - on-the-market
+    signal_note: 'certified_products = one entry per IVDR RISK CLASS with registered devices, never per device;
+      lapsed when no device of that class is on the market. Self-filed actor registration: domain + name check +
+      country agreement, hand-reviewed'
+    other_registrations:
+    - Roche Diagnostics, S.L.U.
+    - Roche Molecular Systems, Inc.
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
+- partner_name: AdvaMedDx (members)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.advamed.org/advameddx/members/
+  category: Diagnostics trade body member
+  contract_reference:
+    register: AdvaMedDx member list (advamed.org/advameddx/members)
+    standard: null
+    spec_file: null
+    role: advameddx-member
+    registered_name: Roche
+    matched_domain: roche.com
+    matched_by: domain
+    detected_by: sweep-ivd-diagnostics.py
+    detected: '2026-10-21'
+    listed_website: https://www.roche.com
+    signal_note: 'self-filed paid membership: listing alone = standard-participant; hand-reviewed'
+  detected_by: sweep-ivd-diagnostics.py
+  first_seen: '2026-10-21'
 generated: '2026-10-12'
 method: searched
 checked:
@@ -83,6 +164,12 @@ checked:
 - https://members.alliancerm.org/Online/Directory/Member-Directory.aspx?WebsiteKey=0a8f86de-1bef-4044-be59-e2f7f1c52e39
 - https://www.ema.europa.eu/en/documents/report/medicines-output-medicines-report_en.xlsx
 - https://www.fda.gov/vaccines-blood-biologics/cellular-gene-therapy-products/approved-cellular-and-gene-therapy-products
+- https://api.fda.gov/device/510k.json
+- https://api.fda.gov/device/pma.json
+- https://api.fda.gov/device/registrationlisting.json
+- https://ec.europa.eu/tools/eudamed/api/
+- https://www.accessdata.fda.gov/premarket/ftparea/clia_detail.zip
+- https://www.advamed.org/advameddx/members/
 source:
 - https://raw.githubusercontent.com/18F/fedramp-data/4b73d9247fd6360759960e4690e3ce4ca858e0fa/data/data.json
 - https://govramp.org/program-participants
